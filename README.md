@@ -38,6 +38,14 @@ python scripts/export_web_data.py   # writes web/data/*.json
 
 Open `web/index.html` through any static server (`python -m http.server` in `web/`).
 
+## Python notebook
+
+[`notebooks/how_it_was_built.ipynb`](notebooks/how_it_was_built.ipynb) walks through the project in the order it was
+built: get the data, load the wide files into NumPy and check them, model the star schema in dbt, then measure
+revenue, forecast error by level and suspected stock-outs with matrix operations and interactive Altair charts
+(brush a time range, click a state, a store or a heat-map cell), and reconcile every answer with the dbt marts.
+The [interactive version](https://guilhermerigonato.com/5-retail-bi/notebook/) runs the charts.
+
 ## Power BI version
 
 `python scripts/export_powerbi_data.py` writes the Parquet files the Power BI project reads. The project itself, with the TMDL model and DAX measures, is in [`powerbi/`](powerbi/README.md).
